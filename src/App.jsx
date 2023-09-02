@@ -5,8 +5,8 @@ import Users from "./components/ListComponent/Users";
 const App = () => {
   return (
     <>
-      {/* <Profiler />
-      <GroupPoster /> */}
+      {/* <Profiler /> */}
+      {/* <GroupPoster /> */}
       <Users />
     </>
   );
