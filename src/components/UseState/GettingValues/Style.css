@@ -1,0 +1,28 @@
+:root {
+  background-color: rgb(204, 221, 235);
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.main > input {
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+}
+.main > button {
+  padding: 8px 25px;
+  font: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  color: dodgerblue;
+}
+.main > button:hover {
+  background-color: rgb(127, 182, 230);
+  transition: all 0.2s ease;
+}
