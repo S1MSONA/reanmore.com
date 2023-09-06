@@ -6,6 +6,8 @@ import Event from "./components/Events/Event";
 import Counter from "./components/UseState/Counter/Counter";
 import ObjectState from "./components/UseState/StateWithObject/ObjectState";
 import GettingFromInput from "./components/UseState/GettingValues/GettingFromInput";
+import Updater from "./components/UseState/UpdaterFunction/Updater";
+import UserList from "./components/UseState/RemoveUser/UserList";
 
 const App = () => {
   return (
@@ -16,7 +18,9 @@ const App = () => {
       {/* <Products /> */}
       {/* <Counter /> */}
       {/* <ObjectState /> */}
-      <GettingFromInput />
+      {/* <GettingFromInput /> */}
+      {/* <Updater /> */}
+      <UserList />
     </>
   );
 };
