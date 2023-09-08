@@ -8,6 +8,8 @@ import ObjectState from "./components/UseState/StateWithObject/ObjectState";
 import GettingFromInput from "./components/UseState/GettingValues/GettingFromInput";
 import Updater from "./components/UseState/UpdaterFunction/Updater";
 import UserList from "./components/UseState/RemoveUser/UserList";
+import ToggleWithState from "./components/UseState/ToggleWithState/ToggleWithState";
+import ChangeTitle from "./components/UseEffect/ChangeTitle/ChangeTitle";
 
 const App = () => {
   return (
@@ -20,7 +22,9 @@ const App = () => {
       {/* <ObjectState /> */}
       {/* <GettingFromInput /> */}
       {/* <Updater /> */}
-      <UserList />
+      {/* <UserList /> */}
+      {/* <ToggleWithState /> */}
+      <ChangeTitle />
     </>
   );
 };
