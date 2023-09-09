@@ -10,6 +10,7 @@ import Updater from "./components/UseState/UpdaterFunction/Updater";
 import UserList from "./components/UseState/RemoveUser/UserList";
 import ToggleWithState from "./components/UseState/ToggleWithState/ToggleWithState";
 import ChangeTitle from "./components/UseEffect/ChangeTitle/ChangeTitle";
+import FetchingData from "./components/UseEffect/ChangeTitle/FetchAPI/fetchingData";
 
 const App = () => {
   return (
@@ -24,7 +25,8 @@ const App = () => {
       {/* <Updater /> */}
       {/* <UserList /> */}
       {/* <ToggleWithState /> */}
-      <ChangeTitle />
+      {/* <ChangeTitle /> */}
+      <FetchingData />
     </>
   );
 };
