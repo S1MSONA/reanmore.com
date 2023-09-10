@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./style.css";
 
 const ChangeTitle = () => {
   const [counter, setCouner] = useState(0);

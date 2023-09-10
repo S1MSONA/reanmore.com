@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./Style.css";
 const GettingFromInput = () => {
   const [value, setValue] = useState("");
   const handleChange = (e) => {

@@ -1,4 +1,3 @@
-import "./Cart.css";
 const Cart = (props) => {
   const { imgSrc, brandName, detail, price } = props;
   return (

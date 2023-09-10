@@ -1,5 +1,4 @@
 import React from "react";
-import "./user.css";
 const User = (props) => {
   const { imgSrc, name, age, id, getId } = props;
   const handleClick = () => {

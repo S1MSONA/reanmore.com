@@ -1,5 +1,4 @@
 import Cart from "./Cart";
-import "./Cart.css";
 
 const Products = () => {
   const shoes = [

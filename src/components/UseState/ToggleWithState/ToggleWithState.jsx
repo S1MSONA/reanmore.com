@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import "./style.css";
-
 const ToggleWithState = () => {
   const [alert, setAlert] = useState(false);
   return (

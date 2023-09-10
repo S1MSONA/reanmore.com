@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import User from "./User";
-import "./user.css";
 import PeopleList from "./Data";
 
 const UserList = () => {

@@ -1,5 +1,3 @@
-import "./Poster.css";
-
 const Poster = (props) => {
   const { imageSrc, name, text, children } = props;
   console.log(children);

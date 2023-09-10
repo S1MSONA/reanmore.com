@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-
-import "./Counter.css";
 const Counter = () => {
   const [counter, setCouner] = useState(0);
   // const counter = arr[0];
