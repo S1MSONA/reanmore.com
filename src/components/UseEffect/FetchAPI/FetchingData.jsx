@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 const FetchingData = () => {
   const url = "https://api.github.com/users";
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
   const [users, setUsers] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -16,11 +19,20 @@ const FetchingData = () => {
         // const data = await response.json();
         // setUsers(data);
       } catch (error) {
-        console.log((error.response.statusText = "Something went wrong!"));
+        setIsError(true);
       }
+      setIsLoading(false);
     };
     fetchData();
   }, []);
+
+  if (isLoading) {
+    return <h2 style={{ textAlign: "center" }}>Loading...</h2>;
+  }
+  if (isError) {
+    return <h2 style={{ textAlign: "center" }}>Sonething went wrong!</h2>;
+  }
+
   return (
     <div className="container container-width">
       {users.map((user) => {
