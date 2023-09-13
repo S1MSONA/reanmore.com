@@ -11,6 +11,9 @@ import UserList from "./components/UseState/RemoveUser/UserList";
 import ToggleWithState from "./components/UseState/ToggleWithState/ToggleWithState";
 import ChangeTitle from "./components/UseEffect/ChangeTitle/ChangeTitle";
 import FetchingData from "./components/UseEffect/FetchAPI/fetchingData";
+import StateWithForm from "./components/UseState/FormInput/StateWithForm";
+import RefCounter from "./components/useRef/RehWithCount/RefCounter";
+import Toggle from "./components/CustomHook/useToggle/Toggle";
 
 const App = () => {
   return (
@@ -26,7 +29,10 @@ const App = () => {
       {/* <UserList /> */}
       {/* <ToggleWithState /> */}
       {/* <ChangeTitle /> */}
-      <FetchingData />
+      {/* <FetchingData /> */}
+      {/* <StateWithForm /> */}
+      {/* <RefCounter /> */}
+      <Toggle />
     </>
   );
 };
