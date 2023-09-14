@@ -14,6 +14,8 @@ import FetchingData from "./components/UseEffect/FetchAPI/fetchingData";
 import StateWithForm from "./components/UseState/FormInput/StateWithForm";
 import RefCounter from "./components/useRef/RehWithCount/RefCounter";
 import Toggle from "./components/CustomHook/useToggle/Toggle";
+import UseFetchData from "./components/CustomHook/useFetchData/UseFetchData";
+import Navbar from "./components/useContext/Navigation/Navbar";
 
 const App = () => {
   return (
@@ -32,7 +34,9 @@ const App = () => {
       {/* <FetchingData /> */}
       {/* <StateWithForm /> */}
       {/* <RefCounter /> */}
-      <Toggle />
+      {/* <Toggle /> */}
+      {/* <UseFetchData /> */}
+      <Navbar />
     </>
   );
 };

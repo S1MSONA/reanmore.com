@@ -1,8 +1,8 @@
 import React from "react";
 import Poster from "./Poster";
-import p1 from "../../../assets/p1.jpg";
-import p2 from "../../../assets/p2.jpg";
-import p3 from "../../../assets/p3.jpg";
+import p1 from "../../../assets/img/p1.jpg";
+import p2 from "../../../assets/img/p2.jpg";
+import p3 from "../../../assets/img/p3.jpg";
 
 const GroupPoster = () => {
   return (
