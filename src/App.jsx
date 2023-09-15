@@ -16,6 +16,8 @@ import RefCounter from "./components/useRef/RehWithCount/RefCounter";
 import Toggle from "./components/CustomHook/useToggle/Toggle";
 import UseFetchData from "./components/CustomHook/useFetchData/UseFetchData";
 import Navbar from "./components/useContext/Navigation/Navbar";
+import CustomNavbar from "./components/CustomHook/useNavBarContext/CustomNavBar";
+import RemoveUser from "./components/useReducer/RemoveUser/RemoveUser";
 
 const App = () => {
   return (
@@ -36,7 +38,9 @@ const App = () => {
       {/* <RefCounter /> */}
       {/* <Toggle /> */}
       {/* <UseFetchData /> */}
-      <Navbar />
+      {/* <Navbar /> */}
+      {/* <CustomNavbar /> */}
+      <RemoveUser />
     </>
   );
 };
