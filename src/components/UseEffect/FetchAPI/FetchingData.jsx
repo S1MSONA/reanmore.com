@@ -11,13 +11,6 @@ const FetchingData = () => {
       try {
         const { data } = await axios(url);
         setUsers(data);
-        // const response = await fetch(url);
-        // if (!response.ok) {
-        //   const smg = "Something went wrong!";
-        //   throw new Error(smg);
-        // }
-        // const data = await response.json();
-        // setUsers(data);
       } catch (error) {
         setIsError(true);
       }

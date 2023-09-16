@@ -1,22 +1,39 @@
-import React, { useState } from "react";
-import PeopleList from "./Data";
+import { useReducer } from "react";
+import People from "./Data";
+
+const initialState = {
+  users: People,
+};
+const reducer = (state, action) => {
+  if (action.type === "CLEAR_ALL") return { ...state, users: [] };
+  if (action.type === "RESET") return { ...state, users: People };
+  if (action.type === "REMOVE") {
+    const FilterArray = state.users.filter((f) => f.id !== action.payload.id);
+    return { ...state, users: FilterArray };
+  }
+};
 
 const RemoveUser = () => {
-  const [user, setUser] = useState(PeopleList);
+  const [state, dispatch] = useReducer(reducer, initialState);
+  console.log(state);
+
+  // Clear All
   const handleClear = () => {
-    setUser([]);
+    dispatch({ type: "CLEAR_ALL" });
   };
 
+  //Remove User
   const handleRemove = (id) => {
-    const filterPeople = user.filter((u) => u.id !== id);
-    setUser(filterPeople);
+    dispatch({ type: "REMOVE", payload: { id } });
   };
+
+  //Reset
   const handleReset = () => {
-    setUser(PeopleList);
+    dispatch({ type: "RESET" });
   };
   return (
     <div className="container">
-      {user.map(({ id, imgSrc, name, age }) => (
+      {state.users.map(({ id, imgSrc, name, age }) => (
         <article className="card" key={id}>
           <img src={imgSrc} alt="profile" />
           <h2>{name}</h2>
@@ -26,7 +43,7 @@ const RemoveUser = () => {
           </button>
         </article>
       ))}
-      {user.length === 0 ? (
+      {state.users.length === 0 ? (
         <button className="btn btn-primary" onClick={handleReset}>
           Reset All
         </button>

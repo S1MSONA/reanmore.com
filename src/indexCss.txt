@@ -253,3 +253,51 @@ img {
 .user-container > button:hover {
   background-color: red;
 }
+
+RemoveUser
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(197, 244, 244);
+  padding: 3rem 4rem;
+  border-radius: 2rem;
+  gap: 1.5rem;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  transition: all 0.2s ease;
+  background-color: #fff;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.card > img {
+  width: 70px;
+  border-radius: 50%;
+}
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-danger:hover {
+  background-color: red;
+  transform: scale(1.1);
+}
+.btn-primary {
+  background-color: rgb(9, 98, 188);
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #1e90ff;
+  transform: scale(1.1);
+}
