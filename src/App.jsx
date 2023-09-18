@@ -19,6 +19,7 @@ import Navbar from "./components/useContext/Navigation/Navbar";
 import CustomNavbar from "./components/CustomHook/useNavBarContext/CustomNavBar";
 import RemoveUser from "./components/useReducer/RemoveUser/RemoveUser";
 import FetchData from "./components/useReducer/FectchData/FetchData";
+import NavBar from "./components/Router/Navbar";
 
 const App = () => {
   return (
@@ -42,7 +43,8 @@ const App = () => {
       {/* <Navbar /> */}
       {/* <CustomNavbar /> */}
       {/* <RemoveUser /> */}
-      <FetchData />
+      {/* <FetchData /> */}
+      <NavBar />
     </>
   );
 };

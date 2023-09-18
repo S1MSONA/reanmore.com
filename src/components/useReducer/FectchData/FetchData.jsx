@@ -34,10 +34,10 @@ const FetchData = () => {
   }, []);
 
   if (state.isLoading) {
-    <h2>Loading...</h2>;
+    return <h2 style={{ textAlign: "center" }}>Loading...</h2>;
   }
   if (state.isError) {
-    <h2>Something went wrong!</h2>;
+    return <h2 style={{ textAlign: "center" }}>Something went wrong!</h2>;
   }
   return (
     <div className="container container-width">
