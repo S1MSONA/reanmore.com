@@ -9,6 +9,9 @@ import {
 import { Home, About, Service, ErrorPage } from "./Pages";
 import RootLayout from "../Router/Layout/RootLayout";
 import AboutLayout from "./Layout/AboutLayout";
+import UserLayout from "./Layout/UserLayout";
+import User, { userLoader } from "./Pages/Users/User";
+import UserDetail, { userDetailLoader } from "./Pages/Users/UserDetail";
 
 const NavBar = () => {
   // const router = createBrowserRouter([
@@ -57,6 +60,14 @@ const NavBar = () => {
           <Route path="goal" element={<h4>Goal...</h4>} />
         </Route>
         <Route path="service" element={<Service />} />
+        <Route path="user" element={<UserLayout />}>
+          <Route index element={<User />} loader={userLoader} />
+          <Route
+            path=":id"
+            element={<UserDetail />}
+            loader={userDetailLoader}
+          />
+        </Route>
       </Route>
     )
   );

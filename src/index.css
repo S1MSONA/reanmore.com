@@ -11,6 +11,7 @@
 body {
   height: 100vh;
 }
+div,
 li,
 span,
 p {
@@ -30,6 +31,19 @@ a {
   font-size: 2rem;
   text-decoration: none;
   color: inherit;
+}
+button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: rgb(56, 80, 105);
+  color: #fff;
+  font-size: 2rem;
+  transition: all 0.2s ease;
+}
+button:hover {
+  background-color: rgb(85, 121, 160);
+  transform: scale(1.1);
 }
 .btn-danger {
   background-color: rgb(176, 8, 8);
@@ -116,4 +130,42 @@ footer p {
 .nav-link > a.active {
   background-color: dodgerblue;
   color: #fff;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.user > a {
+  color: white;
+  background: rgb(79, 127, 143);
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+}
+.user > span {
+  font-size: 1.7rem;
+  color: white;
+  background: rgb(79, 127, 143);
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+}
+
+.user-detail {
+  background-color: rgb(75, 75, 75);
+  padding: 2rem;
+}
+.user-detail h3,
+.user-detail h4 {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+.user-detail a {
+  color: rgb(114, 201, 255);
+  border: 2px solid rgb(114, 201, 255);
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
 }
