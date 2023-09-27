@@ -1,16 +1,14 @@
-import React from "react";
-import { Link, useLoaderData } from "react-router-dom";
-
+import { Link, useParams } from "react-router-dom";
+import data from "../../Data/Data";
 const UserDetail = () => {
-  const data = useLoaderData();
-  const { id, name, username, email } = data;
+  const { id } = useParams();
+  const user = data.find((d) => d.id == id);
   return (
     <div>
       <article>
-        <h4>User Id #{id}</h4>
-        <h4>Name: {name}</h4>
-        <h4>Username: {username}</h4>
-        <h4>Email: {email}</h4>
+        <h4>User Id #{user.id}</h4>
+        <h4>Name: {user.name}</h4>
+        <h4>Email: {user.email}</h4>
         <br />
         <button>
           <Link to="/user">Back</Link>
@@ -20,9 +18,13 @@ const UserDetail = () => {
   );
 };
 
-export const userDetailLoader = async ({ params }) => {
-  const { id } = params;
-  const resp = await fetch("https://jsonplaceholder.typicode.com/users/" + id);
-  return resp.json();
-};
+// Get Data by Fetch API
+// export const userDetailLoader = async ({ params }) => {
+//   const { id } = params;
+//   const resp = await fetch("https://jsonplaceholder.typicode.com/users/" + id);
+//   if (!resp.ok) {
+//     throw new Error();
+//   }
+//   return resp.json();
+// };
 export default UserDetail;

@@ -1,7 +1,7 @@
-import { useLoaderData, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import data from "../../Data/Data";
 
 const User = () => {
-  const data = useLoaderData();
   return (
     <div className="user">
       {data.map((d) => (
@@ -13,8 +13,9 @@ const User = () => {
   );
 };
 
-export const userLoader = async () => {
-  const resp = await fetch("https://jsonplaceholder.typicode.com/users");
-  return resp.json();
-};
+// Get Data by Fetch API
+// export const userLoader = async () => {
+//   const resp = await fetch("https://jsonplaceholder.typicode.com/users");
+//   return resp.json();
+// };
 export default User;

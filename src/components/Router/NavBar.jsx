@@ -10,8 +10,9 @@ import { Home, About, Service, ErrorPage } from "./Pages";
 import RootLayout from "../Router/Layout/RootLayout";
 import AboutLayout from "./Layout/AboutLayout";
 import UserLayout from "./Layout/UserLayout";
-import User, { userLoader } from "./Pages/Users/User";
-import UserDetail, { userDetailLoader } from "./Pages/Users/UserDetail";
+import User from "./Pages/Users/User";
+import UserDetail from "./Pages/Users/UserDetail";
+import UserErrorPage from "./Pages/Users/UserErrorPage";
 
 const NavBar = () => {
   // const router = createBrowserRouter([
@@ -61,11 +62,11 @@ const NavBar = () => {
         </Route>
         <Route path="service" element={<Service />} />
         <Route path="user" element={<UserLayout />}>
-          <Route index element={<User />} loader={userLoader} />
+          <Route index element={<User />} />
           <Route
             path=":id"
             element={<UserDetail />}
-            loader={userDetailLoader}
+            errorElement={<UserErrorPage />}
           />
         </Route>
       </Route>
