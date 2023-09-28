@@ -3,7 +3,7 @@ import logo from "../../assets/img/logo-color.webp";
 import { Link } from "react-router-dom";
 const Navigation = () => {
   return (
-    <nav>
+    <nav className="navigation">
       <img src={logo} alt="reanmore logo" />
       <ul>
         <li>
